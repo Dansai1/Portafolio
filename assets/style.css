@@ -1,0 +1,52 @@
+body {
+	background-color: black;
+	color: #00FF00;
+	font-family: "Courier New", monospace;
+}
+
+nav { /*Barra de navegacion base*/
+	margin: 20px;
+	border-style: dashed solid;
+	border-color: #00FF00;
+	font-family: "Courier New", monospace;
+	font-size: x-large;
+	display: flex;
+	gap: 40px; /*espacio entre los items*/
+	justify-content: center; /*centrar el contenido*/
+        padding: 10px;
+
+}
+nav a{
+        color: #00FF00;
+	text-decoration: none;
+
+}
+nav a:hover {	
+	background-color: #00FF00;
+	color: black;
+	text-shadow: none;
+}
+
+h1{
+	font-size: x-large;
+	justify-content: center; /*centrar el contenido*/
+}
+
+.barra {
+	position: fixed;
+	top: 0;
+	width: 100px;
+	height: 100%
+	padding: 20px;
+}
+.izquierda{
+	left: 0;
+}
+.derecha{
+	right: 0;
+}
+
+.content{
+	margin: 0 100px;
+	padding: 20px;
+}
