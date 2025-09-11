@@ -1,9 +1,16 @@
 body {
-	background-color: black;
+	background-color: #0d1f19;
 	color: #00FF00;
 	font-family: "Courier New", monospace;
 }
 
+header{
+	display: flex;
+	flex-direction: column;
+	align-items: center; /*centrar horizontalmente*/
+}
+
+/*--------------------Barra de navegacion--------------------------*/
 nav { /*Barra de navegacion base*/
 	margin: 20px;
 	border-style: dashed solid;
@@ -27,26 +34,42 @@ nav a:hover {
 	text-shadow: none;
 }
 
+/*--------------------Titulo principal--------------------------*/
 h1{
-	font-size: x-large;
-	justify-content: center; /*centrar el contenido*/
+	font-size: 3.5em;
 }
 
-.barra {
-	position: fixed;
-	top: 0;
-	width: 100px;
-	height: 100%
-	padding: 20px;
+/*------------------Seccion sobre mi----------------------------------*/
+#sobre_mi {
+        margin: 50px 50px 0 50px;
+	display: flex;
+	align-items: center;
+	gap: 50px; /*espacio entre los items dentro de la caja*/
+	justify-content: center;
 }
-.izquierda{
-	left: 0;
+#sobre_mi .fotoMy img {
+        max-width: 500px;
+	border: 3px solid #00FF00;
+	padding:5px
 }
-.derecha{
-	right: 0;
+#sobre_mi .textoIntroduccion h3{
+        font-size: 2em;
 }
 
-.content{
-	margin: 0 100px;
-	padding: 20px;
+/*-------------------Conocimientos------------------------------------*/
+#conocimientos { 
+        text-align: center;
+	margin: 50px 50px 0 50px;
+}
+#conocimientos .categoria {
+        margin-bottom: 50px;
+}
+#conocimientos h3{
+        margin-bottom: 20px;
+	font-size: 1.5em;
+}
+#conocimientos .categoria img{
+        width: 80px;
+	height: auto;
+	margin: 0 50px 0 0;
 }
