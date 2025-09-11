@@ -62,7 +62,7 @@ h1{
 	margin: 50px 50px 0 50px;
 }
 #conocimientos .categoria {
-        margin-bottom: 50px;
+        margin-bottom: 50px; /*espacio de la parte inferior*/
 }
 #conocimientos h3{
         margin-bottom: 20px;
