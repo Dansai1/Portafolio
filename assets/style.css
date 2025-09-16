@@ -1,19 +1,27 @@
 body {
+	padding-top: 80px;
 	background-color: #0d1f19;
 	color: #00FF00;
 	font-family: "Courier New", monospace;
 }
 
 header{
+	background-color: #0d1f19;
 	display: flex;
 	flex-direction: column;
 	align-items: center; /*centrar horizontalmente*/
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 80px;
+	z-index: 99;
 }
 
 /*--------------------Barra de navegacion--------------------------*/
-nav { /*Barra de navegacion base*/
+header nav { /*Barra de navegacion base*/
+        width: 85%;
 	margin: 20px;
-	border-style: dashed solid;
+	border-style: dashed;
 	border-color: #00FF00;
 	font-family: "Courier New", monospace;
 	font-size: x-large;
@@ -23,20 +31,14 @@ nav { /*Barra de navegacion base*/
         padding: 10px;
 
 }
-nav a{
+header nav a{
         color: #00FF00;
 	text-decoration: none;
-
 }
-nav a:hover {	
+header nav a:hover {	
 	background-color: #00FF00;
 	color: black;
 	text-shadow: none;
-}
-
-/*--------------------Titulo principal--------------------------*/
-h1{
-	font-size: 3.5em;
 }
 
 /*------------------Seccion sobre mi----------------------------------*/
@@ -86,6 +88,13 @@ h1{
 #proyectos{
 	margin: 50px 50px 0 50px;
 }
+#proyectos h2{
+        text-align: center;
+	font-size: 2em;
+}
+#proyectos h3{
+	font-size: 1.5em;
+}
 #proyectos .proyectos_contenedor{
 	display: flex;
 	justify-content: center;
@@ -97,8 +106,47 @@ h1{
 	background: #0f2a23;
 	border: 2px solid #00FF00;
 	padding: 20px;
-	min-width: 300px;
-	max-width: 350px;
+	min-width: 350px;
+	max-width: 400px;
 	flex: 0 0 auto;
+}
+#proyectos .proyectos_contenedor .tarjeta_proyecto img{
+        width: 100%;
+	height: auto;
+	display: block;
+}
+
+/*---------------------footer-----------------------------*/
+footer {
+	border-top: 2px solid #00ff00;
+	margin: auto 50px 0 50px;
+	padding: 20px;
+}
+#contacto h2 {
+        margin-bottom: 15px;
+}
+#contacto ul {
+        list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	gap: 30px;
+}
+#contacto li {
+        align-items: center;
+	gap: 8px;
+}
+#contacto a {
+        color: #00FF00;
+	text-decoration: none;
+}
+#contacto a:hover {
+	background-color: #00FF00;
+	color: black;
+	text-shadow: none;
+}
+#contacto img {
+        width: 20px;
+	height: auto;
 }
 
