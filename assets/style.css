@@ -5,6 +5,7 @@ body {
 	font-family: "Courier New", monospace;
 }
 
+/*----------------ZonaSuperior-----------------------------------*/
 header{
 	background-color: #0d1f19;
 	display: flex;
@@ -19,19 +20,23 @@ header{
 
 /*--------------------Barra de navegacion--------------------------*/
 header nav { /*Barra de navegacion base*/
+	position: relative;
+	z-index: 1;
         width: 85%;
-	margin: 20px;
-	border-style: dashed;
-	border-color: #00FF00;
+	margin: 20px auto;
+        padding: 10px;
+	justify-content: center; /*centrar el contenido*/
+	gap: 40px; /*espacio entre los items*/
 	font-family: "Courier New", monospace;
 	font-size: x-large;
 	display: flex;
-	gap: 40px; /*espacio entre los items*/
-	justify-content: center; /*centrar el contenido*/
-        padding: 10px;
-
+	background-color: #0d1f19;
+	border: 2px dashed #00FF00;
+	overflow: visible;
 }
-header nav a{
+
+
+header nav a{ /*Cuadros de color al pasar el mause sobre la opciones*/
         color: #00FF00;
 	text-decoration: none;
 }
@@ -40,6 +45,7 @@ header nav a:hover {
 	color: black;
 	text-shadow: none;
 }
+/*--------------------------------------------------------------------*/
 
 /*------------------Seccion sobre mi----------------------------------*/
 #sobre_mi {
@@ -49,12 +55,12 @@ header nav a:hover {
 	gap: 50px; /*espacio entre los items dentro de la caja*/
 	justify-content: center;
 }
-#Sobre_mi .fotoMy img {
+#sobre_mi .fotoMy img {
         max-width: 500px;
 	border: 3px solid #00FF00;
 	padding:5px
 }
-#Sobre_mi .textoIntroduccion h3{
+#sobre_mi .textoIntroduccion h3{
         font-size: 2em;
 }
 
@@ -150,3 +156,9 @@ footer {
 	height: auto;
 }
 
+/*--------------------------------------------------------------*/
+/*-------------------------animaciones--------------------------*/
+.animated-border {
+	position: relative;
+	display: inline-block;
+}	
