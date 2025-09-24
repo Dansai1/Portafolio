@@ -20,6 +20,7 @@ header{
 
 /*--------------------Barra de navegacion--------------------------*/
 header nav { /*Barra de navegacion base*/
+        text-align: center;
 	position: relative;
 	z-index: 1;
         width: 85%;
@@ -31,7 +32,7 @@ header nav { /*Barra de navegacion base*/
 	font-size: x-large;
 	display: flex;
 	background-color: #0d1f19;
-	border: 2px dashed #00FF00;
+	/*border: 2px dashed #00FF00;*/
 	overflow: visible;
 }
 
@@ -56,7 +57,7 @@ header nav a:hover {
 	justify-content: center;
 }
 #sobre_mi .fotoMy img {
-        max-width: 500px;
+        max-width: 400px;
 	border: 3px solid #00FF00;
 	padding:5px
 }
@@ -65,9 +66,36 @@ header nav a:hover {
 }
 
 /*-------------------Conocimientos------------------------------------*/
-#conocimientos { 
+#conocimientos {
+        display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 20px;
+	margin: 50px auto
+	width: 90%;
+}
+#conocimientos .contenido-principal {
+        flex: 2;
         text-align: center;
-	margin: 50px 50px 0 50px;
+	margin: 50px;
+}
+#conocimientos .cajaCode {
+        flex: 1.5;	
+	background: #0f2a23;
+	color: #00ff00;
+	font-family: "Courier New", monospace;
+	font-size: 14px;
+	padding: 15px;
+	border: 2px solid #00ff00;
+	height: 500px;
+	overflow: hidden;
+	white-space: pre-line;
+}
+#conocimientos .cajaCode.izquierda{
+        margin: 180px auto auto 50px;
+}
+#conocimientos .cajaCode.derecha{
+        margin: 180px 50px auto auto;
 }
 #conocimientos .categoria {
         margin-bottom: 50px; /*espacio de la parte inferior*/
@@ -158,7 +186,80 @@ footer {
 
 /*--------------------------------------------------------------*/
 /*-------------------------animaciones--------------------------*/
+/*---Bordes animados---*/
 .animated-border {
 	position: relative;
-	display: inline-block;
+	display: flex;
+        background: #0d1f19;
+	z-index: 0;
 }	
+.animated-border::before {/*superior*/
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: repeating-linear-gradient(
+	  90deg,
+          #00ff00 0 10px,
+	  transparent 10px 20px
+	);
+	animation: move-x 2s linear infinite;
+}
+.animated-border::after {/*inferior*/
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: repeating-linear-gradient(
+	  270deg,
+          #00ff00 0 10px,
+	  transparent 10px 20px
+	);
+	animation: move-x-reverse 2s linear infinite;
+}
+.animated-border .left {/*izquierdo*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 2px;
+	background: repeating-linear-gradient(
+	  0deg,
+          #00ff00 0 10px,
+	  transparent 10px 20px
+	);
+	animation: move-y-reverse 2s linear infinite;
+}
+.animated-border .right {/*derecho*/
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 2px;
+	background: repeating-linear-gradient(
+	  180deg,
+          #00ff00 0 10px,
+	  transparent 10px 20px
+	);
+	animation: move-y 2s linear infinite;
+}
+@keyframes move-x {/*animacion*/
+        0% {background-position: 0 0;}
+	100% {background-position: 40px 0;}
+}
+@keyframes move-x-reverse {
+        0% {background-position: 0 0;}
+	100% {background-position: -40px 0;}
+}
+@keyframes move-y {
+        0% {background-position: 0 0;}
+	100% {background-position: 0 40px;}
+}
+@keyframes move-y-reverse {
+        0% {background-position: 0 0;}
+	100% {background-position: 0 -40px;}
+}
